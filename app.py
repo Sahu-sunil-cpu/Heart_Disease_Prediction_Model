@@ -71,7 +71,7 @@ div[data-testid="stMetric"]{
 def load_model():
     model = joblib.load("Model/model.pkl")
     scaler = joblib.load("Model/scaler.pkl")
-    feature_names = joblib.load("feature_names.joblib")
+    feature_names = joblib.load("Model/feature_names.joblib")
     return model, scaler, feature_names
 
 
