@@ -2,7 +2,6 @@ import streamlit as st
 import numpy as np
 import pandas as pd
 import joblib
-from pathlib import Path
 import plotly.express as px
 import plotly.graph_objects as go
 
@@ -68,13 +67,19 @@ div[data-testid="stMetric"]{
 # =====================================================
 
 
-BASE_DIR = Path(__file__).resolve().parent
-MODEL_DIR = BASE_DIR / "model"
+@st.cache_resource
+def load_model():
+    model = joblib.load("Model/model.pkl")
+    scaler = joblib.load("Model/scaler.pkl")
+    feature_names = joblib.load("feature_names.joblib")
+    return model, scaler, feature_names
 
-model = joblib.load(MODEL_DIR / "model.pkl")
-scaler = joblib.load(MODEL_DIR / "scaler.pkl")
-feature_names = joblib.load(MODEL_DIR / "feature_names.joblib")
 
+try:
+    model, scaler, feature_names = load_model()
+except Exception as e:
+    st.error(f"Unable to load model.\n\n{e}")
+    st.stop()
 # =====================================================
 # HEADER
 # =====================================================
