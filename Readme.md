@@ -11,7 +11,7 @@ One of the key objectives of this project is not only to predict whether a patie
 The application is deployed using **Streamlit Community Cloud**.
 
 **Live Application:**  
-*Add your Streamlit deployment link here.*
+(https://heartdiseaseprediction-ssczc.streamlit.app/)
 
 The application allows users to enter various clinical measurements such as age, blood pressure, cholesterol level, chest pain type, maximum heart rate, and other health indicators to predict the likelihood of heart disease in real time.
 
@@ -1253,12 +1253,6 @@ Passionate about:
 - Backend Development
 - Data Science
 - Cloud Computing
-
-### Connect with Me
-
-- **GitHub:** https://github.com/Sahu-sunil-cpu
-- **LinkedIn:** https://www.linkedin.com/in/sunil-kumar-sahu
-- **Email:** sahusunilcpu@gmail.com
 
 ---
 
